@@ -1,0 +1,19 @@
+<body>
+  <h1> Stupid coaching </h1>
+
+  <%= params[:question] %>
+  <p> -You </p>
+
+  <% if params[:question].downcase == 'i am going to work!'%>
+    <%= 'Great !'%>
+  <% elsif params[:question].end_with?('?')%>
+    <%= 'Silly question, get dressed and go to work!'%>
+  <% else %>
+    <%= 'I dont care, get dressed and go to work!'%>
+  <% end %>
+  <p> -Your coach </p>
+
+  <%= link_to "Go back", ask_path %>
+
+</body>
+
